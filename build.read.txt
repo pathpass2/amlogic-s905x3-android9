@@ -1,0 +1,9 @@
+source build/envsetup.sh
+source env.sh
+cd bootloader/uboot-repo/  && ./mk g12a_x96_q1_v1 --systemroot
+
+cd .. && cd ..
+
+lunch
+
+make -j12  otapackage
