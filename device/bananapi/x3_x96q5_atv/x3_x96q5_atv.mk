@@ -80,7 +80,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.timezone=Asia/Shanghai
 PRODUCT_NAME := x3_x96q5_atv
 PRODUCT_DEVICE := x3_x96q5_atv
-$(call inherit-product, device/bananapi/x3_x96q5_atv/BoardConfig.mk)
+include device/bananapi/x3_x96q5_atv/BoardConfig.mk
 PRODUCT_BRAND := XingYi_x3
 PRODUCT_MODEL := x3_x96q5_atv
 PRODUCT_MANUFACTURER := XingYi
