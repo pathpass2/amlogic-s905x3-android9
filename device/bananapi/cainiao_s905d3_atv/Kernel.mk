@@ -57,7 +57,7 @@ else
 -include device/bananapi/common/npu_modules.mk
 -include device/bananapi/common/tuner/tuner_modules.mk
 #KERNEL_DEVICETREE := sm1_s905x3_bananapi_m5 sm1_s905x3_bananapi_m2_pro
-KERNEL_DEVICETREE := sm1_s905x3_x96q5
+KERNEL_DEVICETREE := sm1_s905d3_cainiao
 KERNEL_DEFCONFIG := meson64_defconfig
 
 KERNEL_ARCH := arm64
