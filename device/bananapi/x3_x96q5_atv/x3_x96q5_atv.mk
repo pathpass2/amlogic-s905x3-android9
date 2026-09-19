@@ -78,10 +78,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
         persist.sys.hdmi.keep_awake=false
 
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.timezone=Asia/Shanghai
-PRODUCT_NAME := x3_x96q5_atv
-PRODUCT_DEVICE := x3_x96q5_atv
+PRODUCT_NAME := cainiao_s905d3
+PRODUCT_DEVICE := cainiao_s905d3
 PRODUCT_BRAND := XingYi_x3
-PRODUCT_MODEL := x3_x96q5_atv
+PRODUCT_MODEL := cainiao_s905d3
 PRODUCT_MANUFACTURER := XingYi
 
 TARGET_KERNEL_BUILT_FROM_SOURCE := true

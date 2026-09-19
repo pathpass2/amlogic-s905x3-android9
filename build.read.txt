@@ -1,9 +1,16 @@
+#! /bin/bash
 source build/envsetup.sh
 source env.sh
-cd bootloader/uboot-repo/  && ./mk g12a_x96_q1_v1 --systemroot
+#cd bootloader/uboot-repo/  && ./mk g12a_x96_q1_v1 --systemroot
+cd bootloader/uboot-repo/  && ./mk sm1_ac213_v1
+
+cp build/u-boot.bin           ../../device/bananapi/x3_x96q5_atv/bootloader.img
+cp build/u-boot.bin.usb.bl2   ../../device/bananapi/x3_x96q5_atv/upgrade/u-boot.bin.usb.bl2
+cp build/u-boot.bin.usb.tpl   ../../device/bananapi/x3_x96q5_atv/upgrade/u-boot.bin.usb.tpl
+cp build/u-boot.bin.sd.bin    ../../device/bananapi/x3_x96q5_atv/upgrade/u-boot.bin.sd.bin
 
 cd .. && cd ..
 
-lunch
+lunch 14
 
 make -j12  otapackage
