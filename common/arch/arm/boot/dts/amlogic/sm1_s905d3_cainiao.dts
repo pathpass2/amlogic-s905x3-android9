@@ -18,11 +18,11 @@
 /dts-v1/;
 
 #include "mesonsm1.dtsi"
-#include "partition_mbox_normal_P_32.dtsi"
+#include "partition_cainiao_normal_P_32.dtsi"
 #include "mesonsm1_skt-panel.dtsi"
 
 / {
-	model = "Amlogic X96 Q1";
+	model = "Amlogic CAINIAO S905D3";
 	amlogic-dt-id = "sm1_ac213_2g";
 	compatible = "amlogic, g12a";
 	interrupt-parent = <&gic>;
