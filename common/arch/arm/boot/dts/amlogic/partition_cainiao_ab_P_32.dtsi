@@ -1,0 +1,206 @@
+#include "firmware_ab.dtsi"
+
+/ {
+    partitions: partitions{
+                parts = <33>;
+                part-0 = <&logo>;
+                part-1 = <&recovery_a>;
+                part-2 = <&recovery_b>;
+                part-3 = <&rsv>;
+                part-4 = <&tee>;
+                part-5 = <&crypt>;
+                part-6 = <&misc>;
+                part-7 = <&conf>;
+                part-8 = <&boot_a>;
+                part-9 = <&boot_b>;
+                part-10 = <&cache>;
+                part-11 = <&dtbo_a>;
+                part-12 = <&dtbo_b>;
+                part-13 = <&cri_data>;
+                part-14 = <&param>;
+                part-15 = <&metadata_a>;
+                part-16 = <&metadata_b>;
+                part-17 = <&vbmeta_a>;
+                part-18 = <&vbmeta_b>;
+                part-19 = <&vendor_a>;
+                part-20 = <&vendor_b>;
+                part-21 = <&odm_a>;
+                part-22 = <&odm_b>;
+                part-23 = <&product_a>;
+                part-24 = <&product_b>;
+                part-25 = <&system_a>;
+                part-26 = <&system_b>;
+                part-27 = <&ctc>;
+                part-28 = <&baseparam>;
+                part-29 = <&securestore>;
+                part-30 = <&trustdecore>;
+                part-31 = <&private>;
+                part-32 = <&data>;
+
+                logo:logo{
+                        pname = "logo";
+                        size = <0x0 0x1000000>;
+                        mask = <1>;
+                };
+                recovery_a:recovery_a{
+                        pname = "recovery_a";
+                        size = <0x0 0x1800000>;
+                        mask = <1>;
+                };
+                recovery_b:recovery_b{
+                        pname = "recovery_b";
+                        size = <0x0 0x1800000>;
+                        mask = <1>;
+                };
+                rsv:rsv{
+                        pname = "rsv";
+                        size = <0x0 0x1000000>;
+                        mask = <1>;
+                };
+                tee:tee{
+                        pname = "tee";
+                        size = <0x0 0x2000000>;
+                        mask = <1>;
+                };
+                crypt:crypt{
+                        pname = "crypt";
+                        size = <0x0 0x2000000>;
+                        mask = <1>;
+                };
+                misc:misc{
+                        pname = "misc";
+                        size = <0x0 0x1400000>;
+                        mask = <1>;
+                };
+                conf:conf{
+                        pname = "conf";
+                        size = <0x0 0x400000>;
+                        mask = <1>;
+                };
+                boot_a:boot_a{
+                        pname = "boot_a";
+                        size = <0x0 0x3c00000>;
+                        mask = <1>;
+                };
+                boot_b:boot_b{
+                        pname = "boot_b";
+                        size = <0x0 0x3c00000>;
+                        mask = <1>;
+                };
+                cache:cache{
+                        pname = "cache";
+                        size = <0x0 0x46000000>;
+                        mask = <2>;
+                };
+                dtbo_a:dtbo_a{
+                        pname = "dtbo_a";
+                        size = <0x0 0x800000>;
+                        mask = <1>;
+                };
+                dtbo_b:dtbo_b{
+                        pname = "dtbo_b";
+                        size = <0x0 0x800000>;
+                        mask = <1>;
+                };
+                cri_data:cri_data{
+                        pname = "cri_data";
+                        size = <0x0 0x800000>;
+                        mask = <2>;
+                };
+                param:param{
+                        pname = "param";
+                        size = <0x0 0x4000000>;
+                        mask = <2>;
+                };
+                metadata_a:metadata_a{
+                        pname = "metadata_a";
+                        size = <0x0 0x1000000>;
+                        mask = <1>;
+                };
+                metadata_b:metadata_b{
+                        pname = "metadata_b";
+                        size = <0x0 0x1000000>;
+                        mask = <1>;
+                };
+                vbmeta_a:vbmeta_a{
+                        pname = "vbmeta_a";
+                        size = <0x0 0x200000>;
+                        mask = <1>;
+                };
+                vbmeta_b:vbmeta_b{
+                        pname = "vbmeta_b";
+                        size = <0x0 0x200000>;
+                        mask = <1>;
+                };
+                vendor_a:vendor_a{
+                        pname = "vendor_a";
+                        size = <0x0 0x1C000000>;
+                        mask = <1>;
+                };
+                vendor_b:vendor_b{
+                        pname = "vendor_b";
+                        size = <0x0 0x1C000000>;
+                        mask = <1>;
+                };
+                odm_a:odm_a{
+                        pname = "odm_a";
+                        size = <0x0 0x8000000>;
+                        mask = <1>;
+                };
+                odm_b:odm_b{
+                        pname = "odm_b";
+                        size = <0x0 0x8000000>;
+                        mask = <1>;
+                };
+                product_a:product_a{
+                        pname = "product_a";
+                        size = <0x0 0x8000000>;
+                        mask = <1>;
+                };
+                product_b:product_b{
+                        pname = "product_b";
+                        size = <0x0 0x8000000>;
+                        mask = <1>;
+                };
+                system_a:system_a{
+                        pname = "system_a";
+                        size = <0x0 0x5c800000>;
+                        mask = <1>;
+                };
+                system_b:system_b{
+                        pname = "system_b";
+                        size = <0x0 0x5c800000>;
+                        mask = <1>;
+                };
+                ctc:ctc{
+                        pname = "ctc";
+                        size = <0x0 0x12c00000>;
+                        mask = <1>;
+                };
+                baseparam:baseparam{
+                        pname = "baseparam";
+                        size = <0x0 0x800000>;
+                        mask = <1>;
+                };
+                securestore:securestore{
+                        pname = "securestore";
+                        size = <0x0 0x800000>;
+                        mask = <1>;
+                };
+                trustdecore:trustdecore{
+                        pname = "trustdecore";
+                        size = <0x0 0x1400000>;
+                        mask = <1>;
+                };
+                private:private{
+                        pname = "private";
+                        size = <0x0 0x3200000>;
+                        mask = <1>;
+                };
+                data:data{
+                        pname = "data";
+                        size = <0xffffffff 0xffffffff>;
+                        mask = <4>;
+                };
+        };
+};
