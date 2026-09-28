@@ -123,7 +123,7 @@ TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_USES_SYSTEM_OTHER_ODEX := true
 
-TARGET_PARTITION_DTSI := partition_mbox_ab_P_32.dtsi
+TARGET_PARTITION_DTSI := partition_cainiao_ab_P_32.dtsi
 
 ifeq ($(BOARD_BUILD_DISABLED_VBMETAIMAGE), true)
 TARGET_FIRMWARE_DTSI := firmware_ab.dtsi
@@ -135,9 +135,9 @@ else
 TARGET_NO_RECOVERY := false
 
 ifeq ($(ANDROID_BUILD_TYPE), 64)
-TARGET_PARTITION_DTSI := partition_mbox_normal_P_64.dtsi
+TARGET_PARTITION_DTSI := partition_cainiao_normal_P_64.dtsi
 else
-TARGET_PARTITION_DTSI := partition_mbox_normal_P_2.1G_sysetm_32.dtsi
+TARGET_PARTITION_DTSI := partition_m411a_normal_P_2.1G_sysetm_32.dtsi
 endif
 
 ifneq ($(BUILD_WITH_AVB),true)
