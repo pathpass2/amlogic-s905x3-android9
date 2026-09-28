@@ -1,2 +1,2 @@
 on boot
-    insmod /vendor/lib/modules/rtk_btusb.ko
+    insmod /vendor/lib/modules/sprdbt_tty.ko
