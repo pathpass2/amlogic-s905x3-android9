@@ -1,0 +1,266 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f8b228358bd, pid=29263, tid=29467
+#
+# JRE version:  (9.0+181) (build )
+# Java VM: OpenJDK 64-Bit Server VM (9+181-android4627429, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libc.so.6+0x19d8bd]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -F%F -- %E" (or dumping to /data/git/amlogic_android9/core.29263)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Xmx512m annotator.Main -d out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/annotated libcore/annotations/ojluni.jaif libcore/ojluni/src/main/java/java/io/PrintWriter.java libcore/ojluni/src/main/java/java/lang/Appendable.java libcore/ojluni/src/main/java/java/lang/Boolean.java libcore/ojluni/src/main/java/java/lang/Byte.java libcore/ojluni/src/main/java/java/lang/CharSequence.java libcore/ojluni/src/main/java/java/lang/Character.java libcore/ojluni/src/main/java/java/lang/Class.java libcore/ojluni/src/main/java/java/lang/Double.java libcore/ojluni/src/main/java/java/lang/Enum.java libcore/ojluni/src/main/java/java/lang/Float.java libcore/ojluni/src/main/java/java/lang/Integer.java libcore/ojluni/src/main/java/java/lang/Iterable.java libcore/ojluni/src/main/java/java/lang/Long.java libcore/ojluni/src/main/java/java/lang/Object.java libcore/ojluni/src/main/java/java/lang/String.java libcore/ojluni/src/main/java/java/lang/StringBuffer.java libcore/ojluni/src/main/java/java/lang/StringBuilder.java libcore/ojluni/src/main/java/java/lang/System.java libcore/ojluni/src/main/java/java/lang/Thread.java libcore/ojluni/src/main/java/java/lang/ThreadLocal.java libcore/ojluni/src/main/java/java/lang/reflect/AccessibleObject.java libcore/ojluni/src/main/java/java/lang/reflect/AnnotatedElement.java libcore/ojluni/src/main/java/java/lang/reflect/Array.java libcore/ojluni/src/main/java/java/lang/reflect/Constructor.java libcore/ojluni/src/main/java/java/lang/reflect/Executable.java libcore/ojluni/src/main/java/java/lang/reflect/Field.java libcore/ojluni/src/main/java/java/lang/reflect/GenericArrayType.java libcore/ojluni/src/main/java/java/lang/reflect/GenericDeclaration.java libcore/ojluni/src/main/java/java/lang/reflect/Member.java libcore/ojluni/src/main/java/java/lang/reflect/Method.java libcore/ojluni/src/main/java/java/lang/reflect/Parameter.java libcore/ojluni/src/main/java/java/lang/reflect/ParameterizedType.java libcore/ojluni/src/main/java/java/lang/reflect/Proxy.java libcore/ojluni/src/main/java/java/lang/reflect/Type.java libcore/ojluni/src/main/java/java/lang/reflect/TypeVariable.java libcore/ojluni/src/main/java/java/lang/reflect/WildcardType.java libcore/ojluni/src/main/java/java/util/ArrayList.java libcore/ojluni/src/main/java/java/util/HashMap.java libcore/ojluni/src/main/java/java/util/Iterator.java libcore/ojluni/src/main/java/java/util/List.java libcore/ojluni/src/main/java/java/util/Map.java libcore/ojluni/src/main/java/java/util/Set.java
+
+Host: AMD Ryzen 5 5600X 6-Core Processor, 6 cores, 62G, Ubuntu 22.04.5 LTS
+Time: Fri Oct 16 16:32:29 2026 CST elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f8b1c011800):  JavaThread "Unknown thread" [_thread_in_vm, id=29467, stack(0x00007f8b21443000,0x00007f8b21542000)]
+
+Stack: [0x00007f8b21443000,0x00007f8b21542000],  sp=0x00007f8b215408e8,  free space=1014k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x19d8bd]
+V  [libjvm.so+0x5a0ec6]  classLoader_init1()+0x656
+V  [libjvm.so+0x7ae75b]  init_globals()+0x3b
+V  [libjvm.so+0xc073d7]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x3a7
+V  [libjvm.so+0x7feeac]  JNI_CreateJavaVM+0x5c
+C  [libjli.so+0x3934]  JavaMain+0x84
+C  [libc.so.6+0x94a83]
+
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000001, RCX=0x0000000000000001, RDX=0x0000000000000000
+RSP=0x00007f8b215408e8, RBP=0x00007f8b21540a30, RSI=0x0000000000000001, RDI=0x0000000000000000
+R8 =0x00007f8b213d2510, R9 =0x00007f8b213d2408, R10=0x00007f8b213d2510, R11=0x0000000000000000
+R12=0x00007f8b22646239, R13=0x0000000000000000, R14=0x00007f8b1c009b70, R15=0x00007f8b21540d10
+RIP=0x00007f8b228358bd, EFLAGS=0x0000000000010283, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f8b215408e8)
+0x00007f8b215408e8:   00007f8b21bc7a62 0000000000000022
+0x00007f8b215408f8:   00007f8b21540930 0000000000000000
+0x00007f8b21540908:   0000000000000000 000000000000000b
+0x00007f8b21540918:   00007f8b2232027b 00007f8b22337874 
+
+Instructions: (pc=0x00007f8b228358bd)
+0x00007f8b2283589d:   00 00 00 f3 0f 1e fa 89 f8 48 89 fa c5 f9 ef c0
+0x00007f8b228358ad:   25 ff 0f 00 00 3d e0 0f 00 00 0f 87 33 01 00 00
+0x00007f8b228358bd:   c5 fd 74 0f c5 fd d7 c1 85 c0 74 57 f3 0f bc c0
+0x00007f8b228358cd:   c5 f8 77 c3 66 66 2e 0f 1f 84 00 00 00 00 00 0f 
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+[error occurred during error reporting (printing all threads), id 0xb]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xb]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:02 4741483                            /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/bin/java
+00401000-00402000 rw-p 00001000 08:02 4741483                            /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/bin/java
+38e5f000-38e80000 rw-p 00000000 00:00 0                                  [heap]
+7f8b1c000000-7f8b1c048000 rw-p 00000000 00:00 0 
+7f8b1c048000-7f8b20000000 ---p 00000000 00:00 0 
+7f8b21075000-7f8b213d2000 rw-p 00000000 00:00 0 
+7f8b213d2000-7f8b213e5000 r-xp 00000000 08:02 4741910                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libjimage.so
+7f8b213e5000-7f8b213e7000 rw-p 00012000 08:02 4741910                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libjimage.so
+7f8b213e7000-7f8b213f9000 rw-p 00000000 00:00 0 
+7f8b213f9000-7f8b21400000 r-xp 00000000 08:02 4741929                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libzip.so
+7f8b21400000-7f8b21401000 rw-p 00006000 08:02 4741929                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libzip.so
+7f8b21401000-7f8b2142b000 r-xp 00000000 08:02 4741906                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libjava.so
+7f8b2142b000-7f8b2142d000 rw-p 0002a000 08:02 4741906                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libjava.so
+7f8b2142d000-7f8b2143a000 r-xp 00000000 08:02 4741928                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libverify.so
+7f8b2143a000-7f8b2143c000 rw-p 0000c000 08:02 4741928                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/libverify.so
+7f8b2143c000-7f8b2143d000 r--p 00000000 08:02 15757318                   /usr/lib/x86_64-linux-gnu/librt.so.1
+7f8b2143d000-7f8b2143e000 r-xp 00001000 08:02 15757318                   /usr/lib/x86_64-linux-gnu/librt.so.1
+7f8b2143e000-7f8b2143f000 r--p 00002000 08:02 15757318                   /usr/lib/x86_64-linux-gnu/librt.so.1
+7f8b2143f000-7f8b21440000 r--p 00002000 08:02 15757318                   /usr/lib/x86_64-linux-gnu/librt.so.1
+7f8b21440000-7f8b21441000 rw-p 00003000 08:02 15757318                   /usr/lib/x86_64-linux-gnu/librt.so.1
+7f8b21441000-7f8b21442000 ---p 00000000 00:00 0 
+7f8b21442000-7f8b21443000 rw-p 00000000 00:00 0 
+7f8b21443000-7f8b21447000 ---p 00000000 00:00 0 
+7f8b21447000-7f8b21542000 rw-p 00000000 00:00 0 
+7f8b21542000-7f8b21550000 r--p 00000000 08:02 15757307                   /usr/lib/x86_64-linux-gnu/libm.so.6
+7f8b21550000-7f8b215cc000 r-xp 0000e000 08:02 15757307                   /usr/lib/x86_64-linux-gnu/libm.so.6
+7f8b215cc000-7f8b21627000 r--p 0008a000 08:02 15757307                   /usr/lib/x86_64-linux-gnu/libm.so.6
+7f8b21627000-7f8b21628000 r--p 000e4000 08:02 15757307                   /usr/lib/x86_64-linux-gnu/libm.so.6
+7f8b21628000-7f8b21629000 rw-p 000e5000 08:02 15757307                   /usr/lib/x86_64-linux-gnu/libm.so.6
+7f8b21629000-7f8b22530000 r-xp 00000000 08:02 4741939                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/server/libjvm.so
+7f8b22530000-7f8b22601000 r--p 00f06000 08:02 4741939                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/server/libjvm.so
+7f8b22601000-7f8b22637000 rw-p 00fd7000 08:02 4741939                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/server/libjvm.so
+7f8b22637000-7f8b22698000 rw-p 00000000 00:00 0 
+7f8b22698000-7f8b226c0000 r--p 00000000 08:02 15749079                   /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8b226c0000-7f8b22855000 r-xp 00028000 08:02 15749079                   /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8b22855000-7f8b228ad000 r--p 001bd000 08:02 15749079                   /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8b228ad000-7f8b228ae000 ---p 00215000 08:02 15749079                   /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8b228ae000-7f8b228b2000 r--p 00215000 08:02 15749079                   /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8b228b2000-7f8b228b4000 rw-p 00219000 08:02 15749079                   /usr/lib/x86_64-linux-gnu/libc.so.6
+7f8b228b4000-7f8b228c1000 rw-p 00000000 00:00 0 
+7f8b228c1000-7f8b228c2000 r--p 00000000 08:02 15749081                   /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f8b228c2000-7f8b228c3000 r-xp 00001000 08:02 15749081                   /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f8b228c3000-7f8b228c4000 r--p 00002000 08:02 15749081                   /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f8b228c4000-7f8b228c5000 r--p 00002000 08:02 15749081                   /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f8b228c5000-7f8b228c6000 rw-p 00003000 08:02 15749081                   /usr/lib/x86_64-linux-gnu/libdl.so.2
+7f8b228c6000-7f8b228d4000 r-xp 00000000 08:02 4741892                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/jli/libjli.so
+7f8b228d4000-7f8b228d5000 rw-p 0000e000 08:02 4741892                    /data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/lib/jli/libjli.so
+7f8b228d5000-7f8b228d6000 r--p 00000000 08:02 15757316                   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f8b228d6000-7f8b228d7000 r-xp 00001000 08:02 15757316                   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f8b228d7000-7f8b228d8000 r--p 00002000 08:02 15757316                   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f8b228d8000-7f8b228d9000 r--p 00002000 08:02 15757316                   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f8b228d9000-7f8b228da000 rw-p 00003000 08:02 15757316                   /usr/lib/x86_64-linux-gnu/libpthread.so.0
+7f8b228da000-7f8b228dc000 r--p 00000000 08:02 15740053                   /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f8b228dc000-7f8b228ed000 r-xp 00002000 08:02 15740053                   /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f8b228ed000-7f8b228f3000 r--p 00013000 08:02 15740053                   /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f8b228f3000-7f8b228f4000 ---p 00019000 08:02 15740053                   /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f8b228f4000-7f8b228f5000 r--p 00019000 08:02 15740053                   /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f8b228f5000-7f8b228f6000 rw-p 0001a000 08:02 15740053                   /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f8b228f6000-7f8b228fe000 rw-s 00000000 08:02 8388626                    /tmp/hsperfdata_pathpass2/29263
+7f8b228fe000-7f8b22901000 rw-p 00000000 00:00 0 
+7f8b22901000-7f8b22903000 r--p 00000000 08:02 15738742                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8b22903000-7f8b2292d000 r-xp 00002000 08:02 15738742                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8b2292d000-7f8b22938000 r--p 0002c000 08:02 15738742                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8b22938000-7f8b22939000 r--p 00000000 00:00 0 
+7f8b22939000-7f8b2293b000 r--p 00037000 08:02 15738742                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f8b2293b000-7f8b2293d000 rw-p 00039000 08:02 15738742                   /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fff114e6000-7fff11509000 rw-p 00000000 00:00 0                          [stack]
+7fff11529000-7fff1152d000 r--p 00000000 00:00 0                          [vvar]
+7fff1152d000-7fff1152f000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -ea -Xmx512m 
+java_command: annotator.Main -d out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/annotated libcore/annotations/ojluni.jaif libcore/ojluni/src/main/java/java/io/PrintWriter.java libcore/ojluni/src/main/java/java/lang/Appendable.java libcore/ojluni/src/main/java/java/lang/Boolean.java libcore/ojluni/src/main/java/java/lang/Byte.java libcore/ojluni/src/main/java/java/lang/CharSequence.java libcore/ojluni/src/main/java/java/lang/Character.java libcore/ojluni/src/main/java/java/lang/Class.java libcore/ojluni/src/main/java/java/lang/Double.java libcore/ojluni/src/main/java/java/lang/Enum.java libcore/ojluni/src/main/java/java/lang/Float.java libcore/ojluni/src/main/java/java/lang/Integer.java libcore/ojluni/src/main/java/java/lang/Iterable.java libcore/ojluni/src/main/java/java/lang/Long.java libcore/ojluni/src/main/java/java/lang/Object.java libcore/ojluni/src/main/java/java/lang/String.java libcore/ojluni/src/main/java/java/lang/StringBuffer.java libcore/ojluni/src/main/java/java/lang/StringBuilder.java libcore/ojluni/src/main/java/java/lang/System.java libcore/ojluni/src/main/java/java/lang/Thread.java libcore/ojluni/src/main/java/java/lang/ThreadLocal.java libcore/ojluni/src/main/java/java/lang/reflect/AccessibleObject.java libcore/ojluni/src/main/java/java/lang/reflect/AnnotatedElement.java libcore/ojluni/src/main/java/java/lang/reflect/Array.java libcore/ojluni/src/main/java/java/lang/reflect/Constructor.java libcore/ojluni/src/main/java/java/lang/reflect/Executable.java libcore/ojluni/src/main/java/java/lang/reflect/Field.java libcore/ojluni/src/main/java/java/lang/reflect/GenericArrayType.java libcore/ojluni/src/main/java/java/lang/reflect/GenericDeclaration.java libcore/ojluni/src/main/java/java/lang/reflect/Member.java libcore/ojluni/src/main/java/java/lang/reflect/Method.java libcore/ojluni/src/main/java/java/lang/reflect/Parameter.java libcore/ojluni/src/main/java/java/lang/reflect/ParameterizedType.java libcore/ojluni/src/main/java/java/lang/refle
+java_class_path (initial): /data/git/amlogic_android9/external/annotation-tools/annotation-file-utilities/../../jsr308-langtools/dist/lib/javac.jar:/data/git/amlogic_android9/external/annotation-tools/annotation-file-utilities/bin:/data/git/amlogic_android9/external/annotation-tools/annotation-file-utilities/../scene-lib/bin:/data/git/amlogic_android9/external/annotation-tools/annotation-file-utilities/../asmx/bin:/data/git/amlogic_android9/external/annotation-tools/annotation-file-utilities/annotation-file-utilities.jar:
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=/data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86
+PATH=/data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/bin:/data/git/amlogic_android9/prebuilts/jdk/jdk9/linux-x86/bin:/data/git/amlogic_android9/out/soong/host/linux-x86/bin:/data/git/amlogic_android9/out/host/linux-x86/bin:/data/git/amlogic_android9/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin:/data/git/amlogic_android9/development/scripts:/data/git/amlogic_android9/prebuilts/devtools/tools:/data/git/amlogic_android9/external/selinux/prebuilts/bin:/data/git/amlogic_android9/prebuilts/misc/linux-x86/dtc:/data/git/amlogic_android9/prebuilts/misc/linux-x86/libufdt:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/arm-gnu-toolchain-14.2.rel1-x86_64-aarch64-none-linux-gnu/bin
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xc5e920], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xc5e920], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0xc5e920], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0xa984e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0xa984e0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0xc5e920], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR2: [libjvm.so+0xa983a0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=22.04
+DISTRIB_CODENAME=jammy
+DISTRIB_DESCRIPTION="Ubuntu 22.04.5 LTS"
+uname:Linux 5.15.0-191-generic #201-Ubuntu SMP Fri Aug 7 18:39:04 UTC 2026 x86_64
+libc:glibc 2.35 NPTL 2.35 
+rlimit: STACK 8192k, CORE 0k, NPROC 256595, NOFILE 1048576, AS infinity
+load average:5.96 3.25 1.26
+
+/proc/meminfo:
+MemTotal:       65808136 kB
+MemFree:        59892400 kB
+MemAvailable:   63494316 kB
+Buffers:          759772 kB
+Cached:          2227648 kB
+SwapCached:            0 kB
+Active:          1072096 kB
+Inactive:        3127872 kB
+Active(anon):       1280 kB
+Inactive(anon):  1221868 kB
+Active(file):    1070816 kB
+Inactive(file):  1906004 kB
+Unevictable:       27792 kB
+Mlocked:           27792 kB
+SwapTotal:       8388604 kB
+SwapFree:        8388604 kB
+Dirty:            673716 kB
+Writeback:             0 kB
+AnonPages:       1240152 kB
+Mapped:           139044 kB
+Shmem:              1528 kB
+KReclaimable:    1350884 kB
+Slab:            1478652 kB
+SReclaimable:    1350884 kB
+SUnreclaim:       127768 kB
+KernelStack:        8304 kB
+PageTables:         7368 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    41292672 kB
+Committed_AS:    1872932 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       59532 kB
+VmallocChunk:          0 kB
+Percpu:            71168 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      180032 kB
+DirectMap2M:     2965504 kB
+DirectMap1G:    66060288 kB
+
+
+CPU:total 6 (initial active 6) 
+CPU Model and flags from /proc/cpuinfo:
+model name	: AMD Ryzen 5 5600X 6-Core Processor
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero wbnoinvd arat umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor fsrm
+
+Memory: 4k page, physical 65808136k(59892400k free), swap 8388604k(8388604k free)
+
+vm_info: OpenJDK 64-Bit Server VM (9+181-android4627429) for linux-amd64 JRE (9+181-android4627429), built on Feb 28 2018 23:36:47 by "androidbuild" with gcc 4.8
+
+END.
