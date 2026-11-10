@@ -137,7 +137,7 @@ TARGET_NO_RECOVERY := false
 ifeq ($(ANDROID_BUILD_TYPE), 64)
 TARGET_PARTITION_DTSI := partition_cainiao_normal_P_64.dtsi
 else
-TARGET_PARTITION_DTSI := partition_m411a_normal_P_2.1G_sysetm_32.dtsi
+TARGET_PARTITION_DTSI := partition_m411a_hw_normal_P_2.1G_sysetm_32.dtsi
 endif
 
 ifneq ($(BUILD_WITH_AVB),true)

@@ -18,7 +18,7 @@
 /dts-v1/;
 
 #include "mesong12a.dtsi"
-#include "partition_m411a_normal_P_2.1G_sysetm_32.dtsi"
+#include "partition_m411a_hw_normal_P_2.1G_sysetm_32.dtsi"
 
 / {
 	model = "Amlogic flyer222 cm311_1sa_zq";
@@ -313,6 +313,15 @@
 		nrds-enable = <1>;
 		pps-enable = <1>;
 	};
+
+        tunnel_sync {
+                compatible = "amlogic, tunnel_sync";
+                dev_name = "tunnel_sync";
+                status = "okay";
+                interrupts = <0x00 0x03 0x01>;
+                interrupt-names = "vsync";
+        };
+
 	ionvideo {
 		compatible = "amlogic, ionvideo";
 		dev_name = "ionvideo";
@@ -334,6 +343,22 @@
 		amlvideo2_id = <1>;
 		cma_mode = <1>;
 	};
+
+        meson_uvm {
+                compatible = "amlogic, meson_uvm";
+                status = "okay";
+        };
+
+        meson_videotunnel {
+                compatible = "amlogic, meson_videotunnel";
+                status = "okay";
+        };
+
+        video_composer {
+                compatible = "amlogic, video_composer";
+                dev_name = "video_composer";
+                status = "okay";
+        };
 
 	dvb {
 		compatible = "amlogic, dvb";
